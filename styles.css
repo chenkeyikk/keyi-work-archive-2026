@@ -9,3 +9,19 @@
 .metric-card>span{font-size:12px;font-weight:700;letter-spacing:.07em;color:#55585e}.growth-head{padding:16px 0;font-size:12px;font-weight:700;letter-spacing:.08em;color:var(--ink);background:rgba(242,239,232,.72)}.growth-head span{padding-left:22px}.growth-head span:first-child{padding-left:0}.filter-label{font-size:10.5px!important;font-weight:700;color:#4f5258!important}.filter-list button{font-size:12px}.filter-list em{font-size:11px}.keyword-note{margin:0 0 11px!important;color:var(--muted)!important;font-size:10px!important;line-height:1.65!important}.keyword-cloud button{padding:8px 9px 8px 11px;display:inline-flex;align-items:center;gap:8px;font-size:11px}.keyword-cloud button em{width:21px;height:21px;margin-left:0;display:grid;place-items:center;border-radius:50%;background:var(--paper-2);color:var(--ink);font-size:10px}.keyword-cloud button:hover em,.keyword-cloud button.active em{background:rgba(255,255,255,.22);color:#fff}.result-count{font-size:11px!important}.entry-keywords b{font-size:9px}.entry-keywords span{font-size:10px}
 @media(max-width:680px){.growth-table article>*::before{font-size:10px;font-weight:700;color:#4f5258}.metric-card>span{font-size:11px}}
 .metric-card>span,.filter-label,.filter-list button,.keyword-cloud button,.entry-keywords,.growth-head,.team-map span{font-family:"Microsoft YaHei","PingFang SC","Noto Sans CJK SC",sans-serif}.team-map span{font-size:13px;font-weight:700;letter-spacing:.06em}.team-map p{font-size:13px}.team-map h3{margin-top:28px}
+
+/* Keep every timeline filter reachable in shorter desktop viewports. */
+@media(min-width:1001px){
+  .sticky-panel{
+    max-height:calc(100vh - 142px);
+    padding-right:12px;
+    overflow-y:auto;
+    overscroll-behavior:contain;
+    scrollbar-width:thin;
+    scrollbar-color:var(--line) transparent;
+  }
+  .sticky-panel::-webkit-scrollbar{width:5px}
+  .sticky-panel::-webkit-scrollbar-thumb{background:var(--line);border-radius:8px}
+  .filter-list{grid-template-columns:repeat(2,minmax(0,1fr));border-left:1px solid var(--line)}
+  .filter-list button{padding:9px 8px;border-right:1px solid var(--line)}
+}
