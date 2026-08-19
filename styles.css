@@ -10,6 +10,9 @@
 @media(max-width:680px){.growth-table article>*::before{font-size:10px;font-weight:700;color:#4f5258}.metric-card>span{font-size:11px}}
 .metric-card>span,.filter-label,.filter-list button,.keyword-cloud button,.entry-keywords,.growth-head,.team-map span{font-family:"Microsoft YaHei","PingFang SC","Noto Sans CJK SC",sans-serif}.team-map span{font-size:13px;font-weight:700;letter-spacing:.06em}.team-map p{font-size:13px}.team-map h3{margin-top:28px}
 
+/* The timeline filters are essential controls and must never wait on animation. */
+.timeline-controls{opacity:1!important;transform:none!important}
+
 /* Keep all timeline filters in the page's normal reading flow on desktop. */
 @media(min-width:1001px){
   .sticky-panel{
