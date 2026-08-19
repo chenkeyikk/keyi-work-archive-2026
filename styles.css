@@ -24,10 +24,10 @@
 
 @media(min-width:1001px){
   .timeline-summary{font-size:11px!important;white-space:nowrap}
-  .filter-panel .keyword-cloud{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}
-  .filter-panel .keyword-cloud button{width:100%;min-width:0;padding:6px 7px 6px 9px;justify-content:space-between;gap:5px;font-size:10px;white-space:nowrap}
-  .filter-panel .keyword-cloud button em{width:18px;height:18px;flex:0 0 18px;font-size:9px}
-  .keyword-note{margin-bottom:8px!important;white-space:nowrap}
+  .filter-panel .keyword-cloud{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:5px}
+  .filter-panel .keyword-cloud button{width:100%;min-width:0;padding:5px 4px 5px 6px;justify-content:space-between;gap:3px;font-size:9px;white-space:nowrap}
+  .filter-panel .keyword-cloud button em{width:16px;height:16px;flex:0 0 16px;font-size:8px}
+  .keyword-note{margin-bottom:6px!important;font-size:9px!important;white-space:nowrap}
 }
 
 /* Allow sticky positioning to use the page viewport; clip only horizontal overflow. */
@@ -47,7 +47,10 @@ main{overflow:visible}
   .sticky-panel .kicker{margin-bottom:14px}
   .timeline-controls h2{font-size:clamp(34px,3.2vw,46px);line-height:1.12}
   .timeline-controls>div>p:not(.kicker){line-height:1.65}
-  .search-box{margin-top:22px}
+  .search-box{margin-top:12px;gap:0}
+  .search-box>span{display:none}
+  .search-box input{padding:8px 0}
+  .timeline-next{margin-top:12px;padding:9px 0}
   .filter-label{margin-top:18px!important}
   .filter-list{grid-template-columns:repeat(2,minmax(0,1fr));border-left:1px solid var(--line)}
   .filter-list button{padding:8px;border-right:1px solid var(--line)}
