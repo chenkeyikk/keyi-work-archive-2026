@@ -13,6 +13,15 @@
 /* The timeline filters are essential controls and must never wait on animation. */
 .timeline-controls{opacity:1!important;transform:none!important}
 
+.filter-tabs{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--ink)}
+.filter-tabs button{min-height:38px;padding:8px 10px;border:0;background:transparent;font-size:11px;font-weight:700;cursor:pointer}
+.filter-tabs button+button{border-left:1px solid var(--ink)}
+.filter-tabs button[aria-selected="true"]{background:var(--ink);color:#fff}
+.filter-tabs button[aria-selected="true"]::before{content:"●";margin-right:7px;color:var(--red);font-size:8px}
+.filter-panel{padding-top:12px}
+.filter-panel[hidden]{display:none!important}
+.filter-panel .filter-list{margin-top:0}
+
 /* Allow sticky positioning to use the page viewport; clip only horizontal overflow. */
 html,body{overflow-x:clip}
 main{overflow:visible}
@@ -22,7 +31,7 @@ main{overflow:visible}
   .timeline-controls{align-self:stretch}
   .sticky-panel{
     position:sticky;
-    top:96px;
+    top:88px;
     max-height:none;
     padding:18px 0 20px;
     overflow:visible;
