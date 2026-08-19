@@ -13,14 +13,23 @@
 /* The timeline filters are essential controls and must never wait on animation. */
 .timeline-controls{opacity:1!important;transform:none!important}
 
-/* Keep all timeline filters in the page's normal reading flow on desktop. */
+/* Pin the timeline index while this section is in view; keep its own scroll visible. */
 @media(min-width:1001px){
+  .timeline-controls{align-self:stretch}
   .sticky-panel{
-    position:static;
-    max-height:none;
-    padding-right:0;
-    overflow:visible;
+    position:sticky;
+    top:96px;
+    max-height:calc(100vh - 116px);
+    padding:18px 16px 20px 0;
+    overflow-y:auto;
+    overscroll-behavior:contain;
+    scrollbar-gutter:stable;
+    scrollbar-width:thin;
+    scrollbar-color:var(--red) transparent;
   }
+  .sticky-panel::-webkit-scrollbar{width:6px}
+  .sticky-panel::-webkit-scrollbar-thumb{background:var(--red);border-radius:8px}
+  .sticky-panel::-webkit-scrollbar-track{background:transparent}
   .filter-list{grid-template-columns:repeat(2,minmax(0,1fr));border-left:1px solid var(--line)}
   .filter-list button{padding:9px 8px;border-right:1px solid var(--line)}
 }
