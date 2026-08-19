@@ -23,6 +23,7 @@
 .filter-panel .filter-list{margin-top:0}
 
 @media(min-width:1001px){
+  .timeline-summary{font-size:11px!important;white-space:nowrap}
   .filter-panel .keyword-cloud{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}
   .filter-panel .keyword-cloud button{width:100%;min-width:0;padding:6px 7px 6px 9px;justify-content:space-between;gap:5px;font-size:10px;white-space:nowrap}
   .filter-panel .keyword-cloud button em{width:18px;height:18px;flex:0 0 18px;font-size:9px}
