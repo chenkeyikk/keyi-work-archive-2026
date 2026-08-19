@@ -10,18 +10,14 @@
 @media(max-width:680px){.growth-table article>*::before{font-size:10px;font-weight:700;color:#4f5258}.metric-card>span{font-size:11px}}
 .metric-card>span,.filter-label,.filter-list button,.keyword-cloud button,.entry-keywords,.growth-head,.team-map span{font-family:"Microsoft YaHei","PingFang SC","Noto Sans CJK SC",sans-serif}.team-map span{font-size:13px;font-weight:700;letter-spacing:.06em}.team-map p{font-size:13px}.team-map h3{margin-top:28px}
 
-/* Keep every timeline filter reachable in shorter desktop viewports. */
+/* Keep all timeline filters in the page's normal reading flow on desktop. */
 @media(min-width:1001px){
   .sticky-panel{
-    max-height:calc(100vh - 142px);
-    padding-right:12px;
-    overflow-y:auto;
-    overscroll-behavior:contain;
-    scrollbar-width:thin;
-    scrollbar-color:var(--line) transparent;
+    position:static;
+    max-height:none;
+    padding-right:0;
+    overflow:visible;
   }
-  .sticky-panel::-webkit-scrollbar{width:5px}
-  .sticky-panel::-webkit-scrollbar-thumb{background:var(--line);border-radius:8px}
   .filter-list{grid-template-columns:repeat(2,minmax(0,1fr));border-left:1px solid var(--line)}
   .filter-list button{padding:9px 8px;border-right:1px solid var(--line)}
 }
