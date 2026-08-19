@@ -13,23 +13,21 @@
 /* The timeline filters are essential controls and must never wait on animation. */
 .timeline-controls{opacity:1!important;transform:none!important}
 
-/* Pin the timeline index while this section is in view; keep its own scroll visible. */
+/* Pin the complete timeline index within the diary section without nested scrolling. */
 @media(min-width:1001px){
   .timeline-controls{align-self:stretch}
   .sticky-panel{
     position:sticky;
     top:96px;
-    max-height:calc(100vh - 116px);
-    padding:18px 16px 20px 0;
-    overflow-y:auto;
-    overscroll-behavior:contain;
-    scrollbar-gutter:stable;
-    scrollbar-width:thin;
-    scrollbar-color:var(--red) transparent;
+    max-height:none;
+    padding:18px 0 20px;
+    overflow:visible;
   }
-  .sticky-panel::-webkit-scrollbar{width:6px}
-  .sticky-panel::-webkit-scrollbar-thumb{background:var(--red);border-radius:8px}
-  .sticky-panel::-webkit-scrollbar-track{background:transparent}
+  .sticky-panel .kicker{margin-bottom:14px}
+  .timeline-controls h2{font-size:clamp(34px,3.2vw,46px);line-height:1.12}
+  .timeline-controls>div>p:not(.kicker){line-height:1.65}
+  .search-box{margin-top:22px}
+  .filter-label{margin-top:18px!important}
   .filter-list{grid-template-columns:repeat(2,minmax(0,1fr));border-left:1px solid var(--line)}
-  .filter-list button{padding:9px 8px;border-right:1px solid var(--line)}
+  .filter-list button{padding:8px;border-right:1px solid var(--line)}
 }
