@@ -13,6 +13,10 @@
 /* The timeline filters are essential controls and must never wait on animation. */
 .timeline-controls{opacity:1!important;transform:none!important}
 
+/* Allow sticky positioning to use the page viewport; clip only horizontal overflow. */
+html,body{overflow-x:clip}
+main{overflow:visible}
+
 /* Pin the complete timeline index within the diary section without nested scrolling. */
 @media(min-width:1001px){
   .timeline-controls{align-self:stretch}
