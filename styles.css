@@ -84,3 +84,6 @@ main{overflow:visible}
 .plan-head{max-width:1220px}
 .keep-together{white-space:nowrap}
 @media(max-width:680px){.hero h1{font-size:clamp(46px,14vw,68px)}}
+
+/* The report uses one typeface throughout, including data, dates and utility labels. */
+*,*::before,*::after{font-family:"Microsoft YaHei","PingFang SC","Noto Sans CJK SC",sans-serif!important}
