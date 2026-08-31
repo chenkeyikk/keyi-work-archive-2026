@@ -18,6 +18,7 @@
 .team-map{grid-template-columns:repeat(3,1fr)}.team-map .regional{background:#f4ead0}.team-connector{left:16.7%;right:16.7%}
 .plan-block:last-child .plan-columns p{font-size:14px;line-height:1.9}.plan-block:last-child .plan-columns h4{font-size:19px}
 .plan-principles p{font-size:14px}.plan-roadmap p{font-size:13.5px;line-height:1.9}.plan-data-grid span{font-size:12.5px}.plan-columns p{font-size:14px;line-height:1.9}.plan-columns h4{font-size:19px}
+.plan-roadmap span{font-size:12px;font-weight:700;letter-spacing:.1em}
 @media(max-width:1000px){.plan-roadmap,.plan-data-grid{grid-template-columns:repeat(2,1fr)}.plan-columns{grid-template-columns:1fr}.team-map{grid-template-columns:1fr 1fr}.team-map .regional{grid-column:1/-1}.team-connector{display:none}}
 @media(max-width:680px){.plan-principles,.plan-roadmap,.plan-data-grid,.plan-columns{grid-template-columns:1fr}.plan-principles p:first-child{border-right:0;border-bottom:1px solid var(--line)}.plan-principles p+p{padding-left:0}.plan-block-title{grid-template-columns:1fr;gap:14px}.plan-block-dark{padding:26px 20px}.team-map{grid-template-columns:1fr}.team-map .regional{grid-column:auto}.plan-columns p,.plan-block:last-child .plan-columns p{font-size:13px}.plan-roadmap p{font-size:13px}.plan-principles p{font-size:13px}}
 
