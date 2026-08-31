@@ -87,3 +87,6 @@ main{overflow:visible}
 
 /* The report uses one typeface throughout, including data, dates and utility labels. */
 *,*::before,*::after{font-family:"Microsoft YaHei","PingFang SC","Noto Sans CJK SC",sans-serif!important}
+
+/* Pipeline status is visible at a glance in the unregistered-school table. */
+.school-plan-table .status-confirmed td{background:#e0eee8}.school-plan-table .status-invited td{background:#e2ebf5}.school-plan-table .status-recovery td{background:#f4ead0}.school-plan-table .status-unassigned td{background:#e5e7ea}.school-plan-table .status-confirmed td:nth-child(2){color:#34705d;font-weight:700}.school-plan-table .status-invited td:nth-child(2){color:#315d94;font-weight:700}.school-plan-table .status-recovery td:nth-child(2){color:#825f12;font-weight:700}.school-plan-table .status-unassigned td:nth-child(2){color:#5d636c;font-weight:700}
