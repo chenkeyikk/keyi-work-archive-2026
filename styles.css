@@ -64,3 +64,8 @@ main{overflow:visible}
   .filter-list{grid-template-columns:repeat(2,minmax(0,1fr));border-left:1px solid var(--line)}
   .filter-list button{padding:8px;border-right:1px solid var(--line)}
 }
+
+/* Five factual data points in the individual-contest baseline. */
+.plan-data-grid{grid-template-columns:repeat(5,minmax(0,1fr))}
+@media(max-width:1000px){.plan-data-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:680px){.plan-data-grid{grid-template-columns:1fr}}
