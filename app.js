@@ -80,6 +80,14 @@ $(".dialog-close").addEventListener("click",()=>dialog.close());dialog.addEventL
 
 const observer=new IntersectionObserver(items=>items.forEach(item=>{if(item.isIntersecting){item.target.classList.add("visible");observer.unobserve(item.target)}}),{threshold:.12});
 document.querySelectorAll(".reveal").forEach(el=>observer.observe(el));
+
+// Preserve table context when the school plans collapse into mobile cards.
+document.querySelectorAll(".school-plan-table,.fy12-table-wrap table").forEach(table=>{
+  const labels=[...table.querySelectorAll("thead th")].map(th=>th.textContent.trim());
+  table.querySelectorAll("tbody tr").forEach(row=>{
+    [...row.cells].forEach((cell,index)=>cell.dataset.label=labels[index]||"");
+  });
+});
 renderFilters();renderKeywords();renderTimeline();
 
 // Resolve the target link after the preceding diary has finished laying out.
