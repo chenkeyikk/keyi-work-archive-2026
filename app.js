@@ -81,3 +81,12 @@ $(".dialog-close").addEventListener("click",()=>dialog.close());dialog.addEventL
 const observer=new IntersectionObserver(items=>items.forEach(item=>{if(item.isIntersecting){item.target.classList.add("visible");observer.unobserve(item.target)}}),{threshold:.12});
 document.querySelectorAll(".reveal").forEach(el=>observer.observe(el));
 renderFilters();renderKeywords();renderTimeline();
+
+// Resolve the target link after the preceding diary has finished laying out.
+window.addEventListener("load",()=>{
+  if(location.hash==="#fy12-target"){
+    requestAnimationFrame(()=>requestAnimationFrame(()=>{
+      document.getElementById("fy12-target")?.scrollIntoView({block:"start",behavior:"instant"});
+    }));
+  }
+});
