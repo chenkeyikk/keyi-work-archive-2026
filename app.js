@@ -131,7 +131,7 @@ const dialog=$("#metric-dialog");
 document.querySelectorAll("[data-metric]").forEach(button=>button.addEventListener("click",()=>{const d=metricEvidence[button.dataset.metric];$("#dialog-kicker").textContent=d.kicker;$("#dialog-title").textContent=d.title;$("#dialog-copy").textContent=d.copy;$("#dialog-evidence").innerHTML=d.evidence.map(x=>`<span>${escapeHtml(x)}</span>`).join("");dialog.showModal()}));
 $(".dialog-close").addEventListener("click",()=>dialog.close());dialog.addEventListener("click",e=>{if(e.target===dialog)dialog.close()});
 
-const observer=new IntersectionObserver(items=>items.forEach(item=>{if(item.isIntersecting){item.target.classList.add("visible");observer.unobserve(item.target)}}),{threshold:.12});
+const observer=new IntersectionObserver(items=>items.forEach(item=>{if(item.isIntersecting){item.target.classList.add("visible");observer.unobserve(item.target)}}),{threshold:.01,rootMargin:"0px 0px -24px"});
 document.querySelectorAll(".reveal").forEach(el=>observer.observe(el));
 
 // Preserve table context when the school plans collapse into mobile cards.
