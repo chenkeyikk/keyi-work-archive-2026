@@ -94,7 +94,7 @@ function renderMarketPool(){
       const isErp=source.includes("ERP");
       const contact=isErp?(source.includes("集体")&&!source.includes("非集体")?"有历史学校记录，联系人待复核":"有家庭或历史记录，校方接口待建立"):"待首次建联";
       const next=priority==="A"?"核验负责人，确认适龄人数与校内赛事切入口":priority==="B"?"补齐联系人、决策链与小学初中适龄人数":"复核历史线索，通过转介绍或活动建立校方接口";
-      return `<article class="market-school-record priority-${priority.toLowerCase()}"><div class="market-record-main"><h5>${escapeHtml(name)}</h5><span>${city}</span><span>${stage}</span><span>${curriculum}</span><b>${priority}</b></div><dl><div><dt>内部记录</dt><dd>${escapeHtml(source)}</dd></div><div><dt>客户归属</dt><dd>华南</dd></div><div><dt>联系状态</dt><dd>${contact}</dd></div><div><dt>适配项目</dt><dd>个人赛 / 团体赛 / 营地</dd></div><div><dt>潜在考量</dt><dd>待获取适龄人数</dd></div><div><dt>下一步</dt><dd>${next}</dd></div></dl></article>`;
+      return `<article class="market-school-record priority-${priority.toLowerCase()}"><div class="market-record-main"><h5>${escapeHtml(name)}</h5><span>${city}</span><span>${stage}</span><span>${curriculum}</span><b>${priority}</b></div><dl><div><dt>内部记录</dt><dd>${escapeHtml(source)}</dd></div><div><dt>联系状态</dt><dd>${contact}</dd></div><div><dt>适配项目</dt><dd>个人赛 / 团体赛 / 营地</dd></div><div><dt>潜在考量</dt><dd>待获取适龄人数</dd></div><div><dt>下一步</dt><dd>${next}</dd></div></dl></article>`;
     }).join("")}</div></section>`;
   }).join("");
 }
