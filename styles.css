@@ -230,3 +230,9 @@ main{overflow:visible}
 }
 @media(max-width:1050px){.market-detail-groups .market-school-record dl{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:680px){.market-detail-groups .market-school-record dl{grid-template-columns:1fr 1fr}.market-detail-groups .market-school-record dl>div:last-child{grid-column:1/-1}}
+/* Three school lists use the established palette and mobile card labels. */
+.pending-school-table .status-invited td:nth-child(2){color:inherit;font-weight:400}
+.risk-school-table th:nth-child(1){width:25%}.risk-school-table th:nth-child(2){width:15%}.risk-school-table th:nth-child(3){width:10%}.risk-school-table th:nth-child(4){width:18%}.risk-school-table th:nth-child(5){width:32%}
+.risk-school-table td:nth-child(5){color:inherit;font-weight:400;white-space:normal}
+.school-goal-bridge{grid-template-columns:repeat(4,minmax(0,1fr))}
+@media(max-width:760px){.school-goal-bridge{grid-template-columns:repeat(2,minmax(0,1fr))}.school-plan-table td small{grid-column:2;margin-top:-4px}}
